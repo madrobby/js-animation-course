@@ -1,0 +1,23 @@
+<div style="background:red;position:absolute;top:0px;left:0px;width:100px;height:100px" onclick="run(this)">
+</div>
+
+<script src="emile.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function bounce(pos) {
+  if (pos < (1/2.75)) {
+      return (7.5625*pos*pos);
+  } else if (pos < (2/2.75)) {
+      return (7.5625*(pos-=(1.5/2.75))*pos + .75);
+  } else if (pos < (2.5/2.75)) {
+      return (7.5625*(pos-=(2.25/2.75))*pos + .9375);
+  } else {
+      return (7.5625*(pos-=(2.625/2.75))*pos + .984375);
+  }
+}
+
+function run(element){
+  element.style.cssText += ';left:0px';
+  emile(element, "left:500px", { duration: 1000, easing: bounce })
+}
+</script>

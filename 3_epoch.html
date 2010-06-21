@@ -1,0 +1,16 @@
+<div style="background:red;position:absolute;top:0px;left:0px;width:100px;height:100px" onclick="run(this)">
+</div>
+
+<script type="text/javascript">
+function run(element){
+  var start = (new Date).getTime(), duration = 1000, 
+    finish = start+duration;
+
+  var interval = setInterval(function(){
+    var time = (new Date).getTime(), 
+      pos = time>finish ? 1 : (time-start)/duration;
+    element.style.left = (500*pos) + 'px';    
+    if(time>finish) clearInterval(interval);
+  },10);  
+}
+</script>

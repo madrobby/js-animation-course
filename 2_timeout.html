@@ -1,0 +1,14 @@
+<div style="background:red;position:absolute;top:0px;left:0px;width:100px;height:100px" onclick="run(this)">
+</div>
+
+<script type="text/javascript">
+  function run(element){
+    var direction = 1, i = 0, 
+      interval = setInterval(function(){
+        i += direction;
+        if(i == 1000) direction = -1;
+        element.style.left = i + 'px';
+        if(i < 0) clearInterval(interval); 
+      },10);
+  }
+</script>

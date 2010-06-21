@@ -1,0 +1,12 @@
+<div style="background:red;position:absolute;top:0px;left:0px;width:100px;height:100px" onclick="run(this)">
+</div>
+
+<script type="text/javascript">
+  function run(element){
+    for (var i = 0; i < 500; i++)
+      element.style.left = i + 'px';
+
+    for (var j = 500; j >= 0; j--)
+      element.style.left = j + 'px';
+  }
+</script>

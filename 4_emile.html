@@ -1,0 +1,11 @@
+<div style="background:red;position:absolute;top:0px;left:0px;width:100px;height:100px" onclick="run(this)">
+</div>
+
+<script src="emile.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function run(element){
+  element.style.cssText += ';left:0px';
+  emile(element, "left:500px", { duration: 1000 })
+}
+</script>
